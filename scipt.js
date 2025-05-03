@@ -8,29 +8,12 @@ function getFetch(){
     fetch(url)
         .then(response => response.json()) // parse response as JSON
         .then(data => {
-            console.log(data)
+            // console.log(data.sprites.other.dream_world.front_default)
+            // console.log(data)
+            document.querySelector('h3').innerText = data.name
+            document.querySelector('img').src = data.sprites.other.dream_world.front_default
         })
 }
-
-
-
-
-
-
-
-
-// fetch("https://pokeapi.co/api/v2/pokemon/pikachu")
-//     .then(response => response.json())
-//     .then(data => {
-//         console.log(data.name)
-//     })
-
-//     .catch(error => {
-//         console.log(error)
-//     })
-
-
-
 
 // async await
 // fetchData()
